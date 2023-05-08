@@ -96,7 +96,7 @@ To run the project, execute the following command:
 
 - GitHub: [Zewdie Habtie](https://github.com/zewdieMc)
 - Twitter: [Zewdie Habtie](https://twitter.com/habtiezewdie)
-- LinkedIn: [Zewdie Habtie](linkedin.com/in/zewdiehabtie)
+- LinkedIn: [Zewdie Habtie](https://linkedin.com/in/zewdiehabtie)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
