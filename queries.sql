@@ -95,3 +95,6 @@ SELECT species, AVG(escape_attempts) FROM animals WHERE EXTRACT(YEAR FROM date_o
 --Create a table named owners with the following columns
 CREATE TABLE owners (ID INT GENERATED ALWAYS AS IDENTITY, FULL_NAME VARCHAR(100), AGE INT NOT NULL, PRIMARY KEY(ID));
 
+--Create a table named species
+CREATE TABLE species (ID INT GENERATED ALWAYS AS IDENTITY, NAME VARCHAR(100), PRIMARY KEY(ID));
+
