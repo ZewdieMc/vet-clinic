@@ -33,3 +33,11 @@ INSERT INTO species (name)
 VALUES
 ('Pokemon'),
 ('Digimon');
+
+--Add values to foreign keys in the animals table.
+UPDATE ANIMALS
+SET SPECIES_ID=CASE
+WHEN(NAME LIKE '%mon')
+THEN (SELECT ID FROM species WHERE name='Digimon')
+ELSE (SELECT ID FROM species WHERE name='Pokemon')
+END;
