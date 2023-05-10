@@ -52,3 +52,11 @@ WHEN(NAME IN('Charmander', 'Squirtle','Blossom')) THEN (SELECT ID FROM owners WH
 WHEN(NAME IN('Angemon', 'Boarmon')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Dean Winchester')
 ELSE NULL
 END;
+
+-- INSERT DATA TO VETS TABLE
+INSERT INTO vets (NAME, AGE, DATE_OF_GRADUATION)
+VALUES
+('William Tatcher', 45, '2000-04-23'),
+('Maisy Smith', 26, '2019-01-17'),
+('Stephanie Mendez', 64, '1981-05-4'),
+('Jack Harkness', 38, '2008-06-08');
