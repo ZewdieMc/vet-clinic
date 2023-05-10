@@ -91,3 +91,8 @@ SELECT species, MAX(weight_kg) AS MAX_WEIGHT, MIN(weight_kg) AS MIN_WEIGHT FROM 
 
 --What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 SELECT species, AVG(escape_attempts) FROM animals WHERE EXTRACT(YEAR FROM date_of_birth) BETWEEN 1990 AND 2000 GROUP BY species;
+
+--What animals belong to Melody Pond?
+SELECT NAME FROM ANIMALS JOIN OWNERS ON ANIMALS.OWNER_ID=OWNERS.ID WHERE OWNERS.FULL_NAME='Melody Pond';
+
+--
