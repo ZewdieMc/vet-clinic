@@ -27,3 +27,6 @@ ALTER TABLE ANIMALS ADD species_id INT, ADD CONSTRAINT  FK_SPECIES FOREIGN KEY(s
 
 --In animals table, add column owner_id which is a foreign key referencing owners table
 ALTER TABLE ANIMALS ADD owner_id INT, ADD CONSTRAINT animal_fk FOREIGN KEY(owner_id) REFERENCES owners(ID);
+
+--Create a table named vets
+CREATE TABLE VETS (ID INT GENERATED ALWAYS AS IDENTITY, NAME VARCHAR(100), AGE INT, DATE_OF_GRADUATION DATE);
