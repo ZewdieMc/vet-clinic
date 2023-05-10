@@ -17,3 +17,38 @@ VALUES
     ('Boarmon', '2005-06-07', 7, TRUE, 20.4),
     ('Blossom', '1998-10-13', 3, TRUE, 17),
     ('Ditto', '2022-05-14', 4, TRUE, 22);
+
+    --insert data into the owners table
+INSERT INTO OWNERS (full_name, age)
+VALUES
+('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+--Insert data into species table
+INSERT INTO species (name)
+VALUES
+('Pokemon'),
+('Digimon');
+
+--Add values to foreign keys in the animals table.
+UPDATE ANIMALS
+SET SPECIES_ID=CASE
+WHEN(NAME LIKE '%mon')
+THEN (SELECT ID FROM species WHERE name='Digimon')
+ELSE (SELECT ID FROM species WHERE name='Pokemon')
+END;
+
+--Modify animals to include owner information (owner_id)
+UPDATE ANIMALS
+SET OWNER_ID=CASE
+WHEN(NAME='Agumon') THEN (SELECT ID FROM owners WHERE FULL_NAME='Sam Smith')
+WHEN(NAME IN('Gabumon','Pikachu')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Jennifer Orwell')
+WHEN(NAME IN('Devimon','Plantmon')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Bob')
+WHEN(NAME IN('Charmander', 'Squirtle','Blossom')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Melody Pond')
+WHEN(NAME IN('Angemon', 'Boarmon')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Dean Winchester')
+ELSE NULL
+END;
