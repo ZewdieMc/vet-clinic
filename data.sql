@@ -60,3 +60,11 @@ VALUES
 ('Maisy Smith', 26, '2019-01-17'),
 ('Stephanie Mendez', 64, '1981-05-4'),
 ('Jack Harkness', 38, '2008-06-08');
+
+--Insert data to specialists
+INSERT INTO SPECIALIZATIONs (SPECIES_ID, VETS_ID)
+SELECT SPECIES.ID AS SPECIES_ID, VETS.ID AS VETS_ID
+FROM SPECIES, VETS
+WHERE(VETS.NAME='William Tatcher' AND SPECIES.NAME='Pokemon')
+OR (VETS.NAME='Stephanie Mendez' AND SPECIES.NAME IN('Digimon','Pokemon'))
+OR (VETS.NAME='Jack Harkness' AND SPECIES.NAME='Digimon');
