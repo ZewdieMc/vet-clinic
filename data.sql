@@ -41,3 +41,14 @@ WHEN(NAME LIKE '%mon')
 THEN (SELECT ID FROM species WHERE name='Digimon')
 ELSE (SELECT ID FROM species WHERE name='Pokemon')
 END;
+
+--Modify animals to include owner information (owner_id)
+UPDATE ANIMALS
+SET OWNER_ID=CASE
+WHEN(NAME='Agumon') THEN (SELECT ID FROM owners WHERE FULL_NAME='Sam Smith')
+WHEN(NAME IN('Gabumon','Pikachu')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Jennifer Orwell')
+WHEN(NAME IN('Devimon','Plantmon')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Bob')
+WHEN(NAME IN('Charmander', 'Squirtle','Blossom')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Melody Pond')
+WHEN(NAME IN('Angemon', 'Boarmon')) THEN (SELECT ID FROM owners WHERE FULL_NAME='Dean Winchester')
+ELSE NULL
+END;
