@@ -91,3 +91,7 @@ SELECT species, MAX(weight_kg) AS MAX_WEIGHT, MIN(weight_kg) AS MIN_WEIGHT FROM 
 
 --What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 SELECT species, AVG(escape_attempts) FROM animals WHERE EXTRACT(YEAR FROM date_of_birth) BETWEEN 1990 AND 2000 GROUP BY species;
+
+--Create a table named owners with the following columns
+CREATE TABLE owners (ID INT GENERATED ALWAYS AS IDENTITY, FULL_NAME VARCHAR(100), AGE INT NOT NULL, PRIMARY KEY(ID));
+
