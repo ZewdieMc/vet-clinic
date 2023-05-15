@@ -98,6 +98,12 @@ To run the project, execute the following command:
 - Twitter: [Zewdie Habtie](https://twitter.com/habtiezewdie)
 - LinkedIn: [Zewdie Habtie](https://linkedin.com/in/zewdiehabtie)
 
+👥 Kevin Toro
+
+- GitHub: [@torobucii](https://github.com/torobucci)
+- Twitter: [@torobucii](https://twitter.com/@torobucii)
+- LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
