@@ -52,3 +52,4 @@ WHERE specializations.species_id IS NULL;
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 CREATE index visits_animal_id_asc ON visits(animal_id asc);
 CREATE index visits_vet_id_asc ON visits(vet_id asc);
+CREATE INDEX owner_email_desc ON owners(email DESC);
