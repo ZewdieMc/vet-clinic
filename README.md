@@ -65,11 +65,13 @@ In order to run this project you need: PostgreSQL or any other SQL database.
 ### Setup
 
 Clone this repository to your desired folder:
+
 ```
 git clone https://github.com/zewdieMc/vet-clinic.git
 ```
 
 ### Install
+
 Install [PostgreSQL](https://www.postgresql.org/download/)
 
 #### Usage
@@ -104,6 +106,12 @@ To run the project, execute the following command:
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
 - LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
 
+👤 **AKPAN DANIEL**
+
+- GitHub: [@danutibe07](https://github.com/danutibe07)
+- Twitter: [@Danielutibe07](https://twitter.com/Danielutibe07?t=2kvKPTZQ7IGCw2FugE9xCQ&s=09)
+- LinkedIn: [Akpan Daniel](https://www.linkedin.com/in/danutibe07/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -135,7 +143,6 @@ If you like this project, give it a start in GitHub
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
 
 I would like to thank Microverse for providing the curriculum.
 
