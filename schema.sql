@@ -41,13 +41,7 @@ CREATE TABLE visits (ANIMAL_ID INT, VET_ID INT, DATE_OF_VISIT DATE, PRIMARY KEY(
 CONSTRAINT FK_ANIMAL FOREIGN KEY(ANIMAL_ID) REFERENCES ANIMALS(ID),
 CONSTRAINT FK_VETS FOREIGN KEY(VET_ID) REFERENCES VETS(ID))
 
---How many visits were with a vet that did not specialize in that animal's species?
-SELECT COUNT(*) AS num_visits
-FROM visits
-JOIN animals ON visits.animal_id = animals.id
-JOIN vets ON visits.vet_id = vets.id
-LEFT JOIN specializations ON vets.id = specializations.vets_id
-WHERE specializations.species_id IS NULL;
+ALTER TABLE visits drop constraint visits_pkey;
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 CREATE index visits_animal_id_asc ON visits(animal_id asc);
