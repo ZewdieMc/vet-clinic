@@ -48,3 +48,5 @@ JOIN animals ON visits.animal_id = animals.id
 JOIN vets ON visits.vet_id = vets.id
 LEFT JOIN specializations ON vets.id = specializations.vets_id
 WHERE specializations.species_id IS NULL;
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
